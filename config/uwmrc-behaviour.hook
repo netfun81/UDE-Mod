@@ -1,0 +1,203 @@
+% uwm system default behaviour
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% General behaviour.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% BehaviourFlags = <nr>
+%       Default: 0
+%
+%       Specifies parts of uwm´s behaviour. Expects a sum of the
+%       following values:
+%
+%       1    AllMouse      do not ignore mouse events passed on to uwm by
+%                          some client windows (e.g. xosview can be moved
+%                          easily clicking somewhere in the window using
+%                          this option)
+BehaviourFlags=0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Scripts executed at startup and stop.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% StartScript = <filename>
+%       Default: ""
+%
+%       Sets uwms StartScript to <filename>. The file must be an
+%       executable or a shell script for /bin/sh. If set, this file
+%       will be executed when uwm starts. A "StartScript" line
+%       overrides any previous "StartScript" lines.
+StartScript=StartScript
+
+% StopScript = <filename>
+%       Default: ""
+%
+%       Sets uwms StopScript to <filename>. The file must be an
+%       executable or a shell script for /bin/sh. If set, this file
+%       will be executed when uwm stops. A "StopScript" line overrides
+%       any previous "StopScript" lines.
+StopScript=StopScript
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Menu behaviour.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Submenu Titles
+%      Default: 0
+%      
+%      Lets you choose whether a title is displayed for 
+%       submenus.
+%
+SubMenuTitles=0
+
+% TransientMenues = {0|1}
+%       Default: 1
+%
+%       Lets you choose if you want your menus disappear when you
+%       release the mouse pointer (1) or if you want them to stay
+%       until you either select an item or click somewhere outside of
+%       the menu (0).
+TransientMenues=1
+
+% UWMMenuButton = {1|2|3}
+%       Default: 1
+%
+%       Defines the button which starts the "UWM Menu" from the root
+%       window. Since uwm doesn´t check if all root window menus are
+%       accessible, this option should always be used together with
+%       "DeiconifyButton" and "AppMenuButton" to make sure all three
+%       menus can be reached.
+UWMMenuButton=1
+
+% DeiconifyButton = {1|2|3}
+%       Default: 2
+%
+%       Defines the button which starts the "Windows Menu" from the
+%       root window. Since uwm doesn´t check if all root window menus
+%       are accessible, this option should always be used together
+%       with "UWMMenuButton" and "AppMenuButton" to make sure all
+%       three menus can be reached.
+DeiconifyButton=2
+
+% AppMenuButton = {1|2|3}
+%       Default: 3
+%
+%       Defines the button which starts the "Application Menu" from
+%       the root window. Since uwm doesn´t check if all root window
+%       menus are accessible, this option should always be used
+%       together with "DeiconifyButton" and "DeiconifyButton" to make
+%       sure all three menus can be reached. 
+AppMenuButton=3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Window movement and placement.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PlacementStrategy = {0-7}
+%       Default: 3
+%
+%       Defines the placement strategy to be used. There are the
+%       following possibilities:
+%
+%       0       no placement strategy
+%       2       agressive gradient-placement (place *all* windows
+%               automatically)
+%       1 or 3  gradient-placement (automatic placement)
+%       4       agressive interactive placement (place *all* windows
+%               semi-automatically)
+%       5       interactive placement (semi-automatic placement)
+%       6       agressive user placement (place *all* windows
+%               manually)
+%       7       user placement (manual placement)
+PlacementStrategy=5
+
+% PlacementThreshold = <nr>
+%       Default: 0
+%
+%       Defines the overlapping value in pixels from which on you want
+%       to place your windows manually in interactive placement
+%       strategy. This is useless in other placement strategies. In
+%       most other WMs 0 is used here without any comments or a way to
+%       change.
+%       If you want this option to make sense your values shouldn´t be
+%       too small (I tried out 100000 to be quite a good value at a
+%       screen-size of 1200x1024).
+PlacementThreshold=100000
+
+% SnapDistance = <nr>
+%       Default: 10
+%
+%       Sets the distance (in pixels) from which a window snaps to
+%       another window´s or the screen´s border when being moved.
+SnapDistance=10
+
+% WarpPointerToNewWinH = <nr>
+%       Default: -1
+%
+%       Allows you to make uwm warp the pointer to any newly mapped
+%       window.
+%
+%       0-100   defines the X-position in the window (in percent) the
+%               pointer is warped to.
+%       -1      don´t warp the pointer
+%       -2      warp the pointer to the upper left corner of the
+%               window´s border.
+%
+%       Only takes effect if "WarpPointerToNewWinV" is set between 0
+%       and 100.
+WarpPointerToNewWinH=-1
+
+% WarpPointerToNewWinV = <nr>
+%       Default: -1
+%
+%       Allows you to make uwm warp the pointer to any newly mapped
+%       window.
+%
+%       0-100   defines the Y-position in the window (in percent) the
+%               pointer is warped to.
+%       -1      don´t warp the pointer
+%       -2      warp the pointer to the upper left corner of the
+%               window´s border.
+%
+%       Only takes effect if "WarpPointerToNewWinH" is set between 0
+%       and 100.
+WarpPointerToNewWinV=-1
+
+% RubberMove = {0|1}
+%       Default: 0
+%
+%       0       enables opaque window movement,
+%       1       disables opaque window movement.
+RubberMove=0
+
+% OpaqueMoveSize = <nr>
+%       Default: 0
+%
+%       Specifies the size in pixels from which on windows are no
+%       longer moved opaquely but transparently. A value of 0, which
+%       is also the default, means move always opaque, any other value
+%       means move transparent from that size on. Values greater than
+%       0 might be useful on slower machines with some
+%       applications. You should try out your favourite value or if
+%       e.g. transparent movement for all windows works better on your
+%       machine with your frequently used applications.
+OpaqueMoveSize=500000
+
+% MaxWinWidth = <nr>
+%       Default: 0
+%
+%       Defines the maximum window width allowed during this
+%       session. This is useful on displays with low
+%       resolutions. Unfortunately there might be some problems with
+%       applications not regarding the most basic X11 specifications.
+MaxWinWidth=0
+
+% MaxWinHeight = <nr>
+%       Default: 0
+%
+%       Defines the maximum window height allowed during this
+%       session. This is useful on displays with low
+%       resolutions. Unfortunately there might be some problems with
+%       applications not regarding the most basic X11 specifications.
+MaxWinHeight=0
+

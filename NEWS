@@ -1,0 +1,397 @@
+ude-0.2.11b:
+* various minor bugfixes
+
+ude-0.2.11:
+
+* made keyboard combinations CapsLock and NumLock insensitive (thanks to
+  Alexandr Lyashko)
+* live appmenu reloading now possible (thanks to Alexandr Lyashko)
+* added internationalised font set support for menus and window titles
+* minor updates to urdb
+* some bugfixes
+
+ude-0.2.10:
+
+* 64 bit support
+* Italian language support (thanks to Diego Bertone)
+* some updates to urdb
+* hex icons can have arbitrary sizes and shapes now: The shape is taken from
+  the xpm itself, the position is defined through the xpm extension
+  ude_hex_coords.
+* minor bugfixes.
+
+ude-0.2.9b:
+
+* fixed the following bugs:
+  - OpenOffice1.1 resizing now works properly.
+  - a small bug in the new window focus method was fixed.
+  - some minor updates in urdb.
+  - missing shapes extension is now properly handled (i.e. uwm pops out
+    with an error)
+  - uwm now properly handles missing c preprocessor, backported from the
+    0.3 branch.
+
+ude-0.2.9a:
+
+* fixed an issue with building rpm packages.
+
+ude-0.2.9:
+
+* contains improved window focus strategy from 0.3 branch
+* Menu titles of Submenus now configurable
+* some bugfixes and code cleanup
+* some internationalisation updates
+* some minor updates to urdb
+* includes fix for urdb2gtkd --dump to work correctly as ScreenCommand
+* some improvements for multiscreen (not Xinerama) usage
+
+ude-0.2.8:
+
+* fixed some bugs in the configuration/installation procedure
+* pressing ctrl-alt-mousebutton somewhere over a window will result in the
+  same behaviour as if the mousebutton was pressed over the window's border
+  (draging, resizing etc.).
+* several smaller bugfixes: uwm should no longer be loosing "strange" windows
+  such as x11amp or gqmpg, some fixes in shapes support.
+* some very small steps towards icccm2-compliance.
+
+SNAP07052001
+
+* fixed built and installation procedures
+* added html-documentation
+* overworked support for shaped windows which should now be fully functional.
+* iconified windows are now listed in the windows menu using their icon names
+* window groups are now treated as a whole in workspace management.
+* support for xservers not supporting saveunder and backingstore (xf4.0 with
+  these options switched off)
+* further icccm-code
+
+SNAPSHOT JUN 26 2000:
+
+* support for .jpg background pictures implemented (requires libjpeg)
+* parts of icccm compliance implemented, not finished yet!
+* Bugfix: all kinds of menus are now always completely visible.
+* some smaller optimisations, speed-ups, code-shrinks.
+* improved urdb
+* uwm now respects window gravity
+* Bugfix: uwm now places transparently moved windows correctly if the rubberband
+  snaps.
+
+V0.2.7b-BETA:
+
+* new example config files added (thanx to stephan helma!)
+* new comment character '%' added to uwmrc and appmenu files to avoid problems
+  with c preprocessor
+* some optimisation concerning waiting for a grabbed pointer
+* urdb file now included in distribution.
+
+V0.2.7-BETA:
+
+* new documentation file with detailed description of all uwm configuration
+  files.
+* urdb option added which takes xrdb-files as input files, processes some
+  additional macros and sets X11-resources to your personal preference
+  (workspace-dependent)
+* you can now specify the set of hex icons loaded wit the HexPath option in your
+  uwmrc.
+* if a c preprocessor is found on the system all configuration files are now
+  passed through it before being processed by uwm.
+* menu widgets added to UDElib.
+* window snapping added
+* Bugfix: titles of windows activated froma another workspace should now be
+  displayed correctly.
+* Bugfix: uwm now takes 'appmenu' as the default menu file name in case no
+  uwmrc is found. in case no appmenu's fount either a simple xterm is added to
+  the application menu.
+* Bugfix: uwm shouldn't segfault any longer in case you overwrite a previously
+  loaded screen background pixmap with no pixmap (or in case the second pixmap
+  is not found).
+
+
+V0.2.6-BETA:
+
+* ATTENTION: Installation procedures and language support have completely
+  changed, please read the files INSTALL.UDE, INSTALL, README and ABOUT-NLS
+  for more information about this.
+* uwm now cares about MWM_HINTS (Motif WM Hints) in a simple way i.e. we don't
+  decorate windows with MWM_HINTS set and no function or decoration specified
+  any longer. (xmms and X11amp should be treated correctly now)
+* uwm now has an option to warp the pointer to the center of newly mapped
+  windows. this is especially useful in case you use big virtual screens or
+  use programs which take their main input from the keyboard but pop up windows
+  from tine to time.
+* you can now place a window manually without having to grab the mouse: simply
+  hit return or enter.
+* uwm will now broadcast information for UDElib programs (as a preparation for
+  UDElib)
+* the root windows background won't be touched anymore by uwm in case neither
+  BackPixmap nor BackColor of the corresponding WS are set in uwmrc.
+* uwm now sets some properties with information about the screen background.
+* We have now added html docs, thanx to Kevin 'extrasolar' Holmes for this.
+* Bugfix: uwm won't execute StopScript anymore in case you restart it without
+  StartScript.
+* Bugfix: the size of shaped windows should now be treated correctly.
+* ReBugfix: refixed the XEmacs bug. To fix both Xemacs bug and 'lost windows
+  bug' at the same time, we have to 'bend' the specification a little bit: we're
+  now overriding USPosition in case the window is positioned outside of the
+  visible screen area. I hope there won't be any problems occuring because of
+  this.
+
+
+V0.2.5b-BETA:
+
+* Bugfix: use of StopScript wont make uwm hang any longer.
+* Bugfix: 'restart with other wm' works again.
+
+
+V0.2.5-BETA:
+
+* StopScript option implemented
+* Bugfix: uwm won't allow the destruction of windows anymore while the window
+  menu is open to avoid related crashes.
+* Bugfix: removed mem leak of win menu.
+* Bugfix: removed mem leak of title drawing routine.
+* Bugfix: the 'lost windows bug's now really fixed :)
+
+
+V0.2.4-BETA:
+
+* we now have a Portugese Brazilian language support file. Thanx to Cristiano
+  Fonseca for this!
+* the MawWinWidth and MaxWinHeight options are now implemented which allow you
+  to define a maximum size for newly opened and reconfigured windows. This
+  should be useful on low resolution displays, e.g. on laptops etc.
+* you can now select several items from the application menu without having to
+  close and reopen the menu after each selection. simply press and release any
+  button above the desired item. Please note that if the last button is released
+  above the most previously selected item to close the menu the program will not
+  be loaded twice.
+* changed menu scrolling option to prevent unnecessary scrolling of menus
+  fitting completely on the screen.
+* Bugfix: the 'lost windows bug' should be fixed now (windows opened outside the
+  visible screen area are caught again now.)
+* Bugfix: uwm will now redraw window titles as soon as they change.
+* Bugfix: window titles are now positioned correctly after window resizing.
+* Bugfix: uwm won't hang up anymore the whole session if a window has to be
+  placed manually while another program has the pointer grabbed (e.g. a menu is
+  active).
+
+
+V0.2.3-BETA:
+
+* implemented menu scrolling which will enable reaching all menu items, even if
+  the corresponding menu is higher than the screen.
+* Changed autorise to leave a one-pixel-border south and east of the window.
+* Added another window frame layout which will display window titles in the
+  middle of the upper border of the win.
+* updated the red-green-bevelled hex button set to the new one, thanx Glyn!
+* Bugfix: some of the errors #3 removed (thanx, jon!)
+* Bugfix: removed some errors #10 (XFreeColors).
+* Bugfix: colors of overwritten background pixmaps are now being freed.
+
+
+V0.2.2-BETA:
+
+* we finally have some new and much better looking hex icons, thanx to
+  Glyn Faulkner for this feature.
+* Bugfix: shaped windows are not partially covered by their titles anymore.
+* Bugfix: the title-box of nameless windows should no longer be displayed.
+* Bugfix: 'launch other wm' submenu no longer displayed if no other wm specified
+  in uwmrc.
+* Bugfix: uwm won't segfault anymore dereferencing environment variables in
+  menufile FILE lines.
+* Bugfix: XEmacs won't ask you anymore to place some of its windows twice when
+  manual placement is selected.
+
+
+V0.2.1-BETA:
+
+* updated the manuals.
+* Added window titles.
+* changed default behaviour if input hint in WMHints is not avaiable.
+* Bugfix: submenus too wide for the screen are no longer displayed left of the
+  screen.
+* Bugfix: withdrawn windows are now treated correctly.
+* Optimized iconifying and workspace-switching.
+* Bugfix: gvim won't crash uwm anymore (UpdateName).
+* Bugfix: removed some error #3's (shaped windows).
+* Bugfix: WMHints of a window are no longer destroyed when window is iconified
+  or deiconified.
+
+
+V0.2.0-BETA:
+
+* Changed the configuration, compilation, and installation to a comfortable
+  make configure/automake combination.
+* You can now also use Xcms-strings to specify uwm-colors.
+* PIPE-command now supported in menu-files. Thanx to Adam Sampson for this
+  feature. See uwm_manual in directory doc for details.
+* Language-support is implemented now. Thanx to Jonathan Heusser for this
+  feature.
+* OpaqueMoveSize-option now implemented which makes it possible to move small
+  windows opaque and bigger ones (e.g. depending on your server speed)
+  transparent.
+* Workspace-zapping with the hexagonal winmenu and the uwm-menu is now possible
+  in both directions (try out your mouse-buttons!)
+* some internal optimisation (PrepareIcons, MyCalloc).
+* Spaces are now allowed in uwmrc.
+* uwm now finally draws Bevels on the window-borders to give them the typical
+  3D-look. Thanx to Adam Sampson for the main parts of this feature.
+* uwm now regards the input-flag in WMHints. With this window management
+  routines should be complete, so this is V0.2.0-BETA.
+* uwm will now send WM_TAKE_FOCUS-events which are expected by some programs
+  like xmupad etc.
+* added an option to run and restart uwm without executing the StartScript.
+  type uwm --help for more info and take a look at the 'UWM Menu'.
+* ScreenCommand-option implemented which allows executing a command to set the
+  background of a workspace (e.g. xsnow or xearth). Thanx to Adam Sampson for
+  this feature.
+* ReadFrom-option implemented which enables including configfiles of uwmrc-
+  format into uwmrc similar to FILE-option in the menufiles. Thanx to Jonathan
+  Heusser for this feature.
+* Bugfix: uwm will now activate a moved or resized window and keep it active
+  to prevent errors and strange behaviour. uwm will furthermore activate
+  windows when the hexagonal window-menu is activated on them to show you
+  which window you are operating on.
+* Bugfix: uwm will now also display shaped windows correctly if TitleHeight is
+  not set to 0.
+* Bugfix: window resizing now also works correctly with windows with negative
+  coordinates.
+
+
+V0.1.11-BETA:
+
+* changed the StartScript option to work also directly with executeables.
+  ATTENTION: To use a script you now have to mark it as executeable and you 
+  must add #!/shellpath/shellcommand into it as first line (e.g. #!/bin/sh ).
+  See example uwmrc for details.
+* changed the application execution from execvp to execlp(sh -c ... which should
+  enable you using shell escapes like ~. Thanx to Adam Sampson for the right
+  hint at the right time ;)
+  ATTENTION: make sure that all your quoted commands in uwmrc (ShellScript=...)
+  and your menu-files have correct shell-syntax. There were some things accepted
+  in older versions that are no longer accepted now (e.g. if you use a # you now
+  must write \\# instead (one backslash for the shell and one for uwm!))
+* some internal mudularisation as preparation for uds.
+* Bugfixes:
+    - windows iconified at start or restart of uwm are now also listed in
+      the windows-menu.
+    - windows made sticky from another workspace will no longer disappear
+      forever.
+    - Menus active while workspaces change will now always change their color
+      properly.
+    - In case manual placement starts while a menu or winmenu is open uwm will
+      no longer hang up after placing the window: place the window by releasing
+      and pressing the button again and finally release it over the desired
+      item to choose.
+
+
+V0.1.10b-BETA:
+
+* Following bugfixes:
+    - can be compiled on BSD- and glibc-systems again (sigaction
+      incompatibility, extern char **environ; doesn't rely on unistd.h anymore)
+    - removed several 'error #3'-messages. (alive-flag in DeultimizeWin)
+
+
+V0.1.10-BETA:
+
+* Files included into other menu-files will no longer be stupidly appended to
+  the corresponding menue structure but merged into it. Decision is made by
+  item-names. This will e.g. enable you merging a system-wide default-menue
+  into each user's personal menu structure with a simple FILE-command.
+* Environment variables will be dereferenced now in filenames in Config-files.
+* removed the menu-flickering bug.
+* changed the mouse-pointer-changeing-routines of the menues to work correctly.
+* X11-borders are now removed from non-override-redirect-windows before
+  reparenting.
+
+
+V0.1.9-BETA:
+
+* Bugfix (manual window-placement won't hang up in a winmenu if mouse is pressed
+  above another window's border anymore)
+* another Bugfix (uwm won't bother you anymore with the errors caused by command
+  #12 at startup ;) )
+* some fine-tuning on the placement-strategy.
+* changed the window- and workspace-management to a proper unique menu.
+* finally started implementing the window-menue:
+            - sticky windows supported now.
+            - move windows directly to desired workspace.
+
+
+V0.1.8-BETA:
+
+* minor changes in the placement-strategy (we are now also replaceing 
+  windows that are not completely visible on the screen in any way).
+* Some Key-shortcuts:
+            - Zap through the workspaces by pressing Ctrl-Alt-(Left/Right).
+            - Zap through the windows on each workspace by pressing
+              Ctrl-Alt-(Up/Down).
+            - Raise/lower a window by pressing Ctrl-Alt-(PgUp/PgDown).
+            - Iconify a window by pressing Ctrl-Alt-End.
+  More to come on your request. One day (I hope) they'll be configureable
+  somehow.
+* A little Bugfix (the autorise-button in the window-menu should now work
+  correctly.)
+
+
+V0.1.7-BETA:
+
+* Implementation of two more placement-strategies (interactive placement,
+  user placement)
+* Implementation of the 'workspace-zapper' which enables zapping through the
+  workspaces with a single mouse-click: click any mouse-button while the
+  WM-menue is active.
+* Moving windows to another workspace is possible now: click the middle-button
+  while the window-menu is active
+* you can now restart ude, e.g. to reconfigure after changing the config-files
+
+
+V0.1.6-BETA:
+
+* Implementation of a simple placement-strategy. There'll probably be further
+  ones to choose in far future...
+* a little bugfix from V0.1.5b (windows initially iconified and then mapped by
+  the program itself are now treated correctly)
+* Support of the TitleHeight-option in uwmrc, altough I don't see much sense in
+  it.
+
+
+V0.1.5b-BETA:
+
+* just a bugfix to V0.1.5-BETA
+
+
+V0.1.5-BETA:
+
+* you can now also specify absolute/relative pathnames for menufiles
+* you can now include menu-files into other menu-files
+* you can now choose which button will display which menu
+  Thanks to Tim Coleman for this feature.
+* you can now configure the uwm-buttons to your personal preference.
+* you can now choose wether your uwm-menues should be transient or not
+  (see uwmrc for details)
+* The workspace-manager is now implemented
+* several internal bugfixes
+
+
+V0.1.4-BETA:
+
+* you can now choose wether you prefer transparent or opaque window movement
+* you can now configure the uwm-menues to your preferred size
+* the start-script-option is supported now
+* uwm now decorates transient windows with a different border-width (I'll add
+  some configuration-features to this later)
+* uwm now sets the WM_STATE property correctly so that e.g. TkDesks Netscape
+  remote-control and XF86Setup will work
+
+
+V0.1.3-BETA:
+
+* Multiple Colormap support (each window may now have its own colormap
+* Catching windows at startup should now work correctly
+* quotes are now possible in quoted terms in the application-menu-configfile by
+  typeing \", backslashes work with \\ etc...
+* uwm now supports non-override-redirect shaped windows (such as oclock)
+* perhaps something else I can't remember anymore?! (sorry!)

@@ -1,0 +1,5 @@
+#!/bin/sh
+# example StopScript, e.g. to unmount user mountable fss on logout.
+umount /zip
+umount /dosflop
+umount /cdrom

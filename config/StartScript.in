@@ -1,0 +1,18 @@
+#!/bin/sh
+# This is an example start-script for uwm. There have been changes since
+# version 0.1.10b: Due to BSD-compatibility (where's no bash available by
+# default) and user requests we don't force you to use a script anymore. This
+# comes along with the necessity to include #!/shellpath/shellcommand as the
+# first line of your scripts. #!/bin/sh should work on most systems, however
+# you can use any shell of your choice. This should also enable more complex
+# applications than only starting your favourite programs (oh, if you want to
+# start more than one application at a time don't forget the '&'s after the
+# command lines), e.g. check for new mail and only start your e-mail-program
+# if there is some etc. You can now also include a single shell-command 
+# directly into uwmrc such as StartScript="tkdesk" if there's only one program
+# to start. If you quote the command it may also contain space-characters.
+# If you use a script mark it as executeable (use chmod).
+
+# this is very simple and will only display the Readme-file.
+
+xterm -bg black -fg yellow -fn 7x14 -e less @prefix@/doc/@PACKAGE@-@VERSION@/README &

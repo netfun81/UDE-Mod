@@ -1,0 +1,174 @@
+% this file defines all workspace related uwm system default settings.
+% see uwmrc for details.
+
+% WorkSpaces = <nr>
+%       Default: 1
+%
+%       Lets you specify the number of workspaces you want.
+WorkSpaces=3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Settings for workspace #0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% WorkSpaceNr = <nr>
+%       Default: 0
+%
+%       Sets the current workspace. Any options that take effect on
+%       the ´current workspace´ apply to the workspace set to be the
+%       current workspace most recently.
+WorkSpaceNr=0
+
+% WorkSpaceName = <string>
+%       Default: n.a.
+%
+%       Lets you specify a name for the current workspace.
+WorkSpaceName=Dionysus
+
+% ScreenColor = <col>
+%       Default: (subject to changes)
+%
+%       Sets the current workspace´s screen background color.
+ScreenColor=64;40;64
+
+% ScreenPixmap = <filename>
+%       Default: ""
+%
+%       Sets the current workspace´s screen background image to the
+%       image file defined by <filename>. Overrides "ScreenColor" if
+%       set. Currently only the xpm file format is supported.
+%ScreenPixmap=/usr/share/ude/gfx/bgr1.xpm
+
+% ScreenCommand = <string>
+%       Default: ""
+%
+%       Defines a command line which is run when the current workspace
+%       is entered and killed when it is left. You can e.g. use this
+%       to have xearth on the background of one workspace while xsnow
+%       makes it winter on another one. Nice toy... 
+%ScreenCommand=floatbg
+
+% BevelFactor = <float>
+%       Default: 1.5
+%
+%       Defines how extreme bevels are drawn.
+%
+%       1       no bevels
+%       0-1     deep bevels
+%       1-      usual high bevels.
+%
+%       A "BevelFactor" setting affects all 3d-color definitons
+%       between itself and the next "BevelFactor" line.
+BevelFactor=1.5
+
+% InactiveWin = <col>
+%       Default: (subject to changes)
+%
+%       Sets the color of inactive windows´ borders on the current
+%       workspace.
+InactiveWin=120;96;88
+
+% InactiveTitle = <col>
+%       Default: (subject to changes)
+%
+%       Specifies the color the name of active windows is drawn with.
+InactiveTitle=32;20;32
+
+% ActiveWin = <col>
+%       Default: (subject to changes)
+%
+%       Sets the color of the active window´s border on the current
+%       workspace.
+ActiveWin=190;140;126
+
+% ActiveTitle = <col>
+%       Default: (subject to changes)
+%
+%       Specifies the color the name of active windows is drawn with.
+ActiveTitle=black
+
+% FontColor = <col>
+%       Default: (subject to changes)
+%
+%       Sets the current workspace´s default color for standard text.
+FontColor=32;20;32
+
+% BackColor = <col>
+%       Default: (subject to changes)
+%
+%       Sets the current workspace´s background color.
+BackColor=142;136;120
+
+% TextColor = <col>
+%       Default: (subject to changes)
+%
+%       Sets the text color for text windows, e.g. editors, terminals
+%       etc.
+TextColor=32;20;32
+
+% TextBgr = <col>
+%       Default: (subject to changes)
+%
+%       Sets the background color for text windows, e.g. editors,
+%       terminals etc.
+TextBgr=120;96;88
+
+% HighlightedText = <col>
+%       Default: (according to availability)
+%
+%       Sets the font used for highlighted text.
+HighlightedText=black
+
+% HighlightedBgr = <col>
+%       Default: (subject to changes)
+%
+%       Sets the background color of highlighted text.
+HighlightedBgr=190;140;126
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% settings for workspace #1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+WorkSpaceNr=1
+WorkSpaceName=Artemis
+ScreenColor=33;63;33
+
+InactiveWin=89;151;100
+InactiveTitle=white
+
+ActiveWin=162;200;169
+ActiveTitle=black
+
+FontColor=black
+BackColor=113;140;118
+
+TextColor=white
+TextBgr=black
+
+HighlightedText=black
+HighlightedBgr=162;200;169
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% settings for workspace #2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+WorkSpaceNr=2
+
+WorkSpaceName=Selena
+
+ScreenColor=black
+
+InactiveWin=40;50;64
+InactiveTitle=193;204;217
+
+ActiveWin=128;152;176
+ActiveTitle=black
+
+FontColor=black
+BackColor=80;100;128
+
+TextColor=193;204;217
+TextBgr=black
+
+HighlightedText=black
+HighlightedBgr=128;152;176

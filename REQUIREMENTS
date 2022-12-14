@@ -1,0 +1,20 @@
+We don't have a lot of system requirements, but at the moment there are the
+following two things:
+
+* your X-Server must support the shapes-extension
+* you should have the XPM-libraries installed on your system which are 
+  available under some kind of freeware-license via ftp on:
+         ftp.x.org in /contrib  or  koala.inria.fr in /pub/xpm
+  and should work on all unix-systems with X-windows. 
+
+At least the first requirement is met by almost every modern X-server.
+The second one should (if your system hasn't installed xpm-lib by default anyway
+which should be the case on most unixes with X) not be a problem to you sice you
+can simply download and install the really small library.
+
+if your system meets both requirements and you still can't compile uwm, please
+send a bug report with detailed description of your systems and a copy of
+the make-output you got to:
+
+   arc@ude.org
+

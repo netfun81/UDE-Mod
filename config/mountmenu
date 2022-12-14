@@ -1,0 +1,10 @@
+SUBMENU "(u)mount" {
+  ITEM "mount floppy":"mount /dosflop";
+  ITEM "umount floppy":"umount /dosflop";
+  LINE;
+  ITEM "mount zip":"mount /zip";
+  ITEM "umount zip":"umount /zip";
+  LINE;
+  ITEM "mount CD-Rom":"mount /cdrom";
+  ITEM "umount CD-Rom":"umount /cdrom";
+}

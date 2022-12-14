@@ -1,0 +1,8 @@
+There is a spec file for RedHat users all you have to do is:
+
+ln -s ude-VERSION.tar.gz /usr/src/redhat/SOURCES
+rpm -bb ude.spec
+
+Where ude-VERSION.tar.gz is the tarball that create this directory.
+The ude.spec file is located at the top of the ude source directory.
+Those lines must be run as root.

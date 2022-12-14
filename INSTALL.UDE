@@ -1,0 +1,21 @@
+Some comments about the default Automake INSTALL file and ude/uwm:
+
+* in case ude has NEVER BEEN INSTALLED ON YOUR SYSTEM BEFORE and you want to
+  install ude in the standard GNU-coding standards compliant way simply ignore
+  this file and read INSTALL instead.
+
+* in case you want to SWITCH FROM THE FORMER UDE INSTALLATION METHOD TO GNU
+  compliant installation simply delete your former UDEdir (after saving your
+  config subdirectory), make sure that the UDEdir environment is no longer set
+  and follow the instructions in the INSTALL file.
+
+* in case you want to stay with the old UDEdir installation method which is not
+  recommended since we´re not quite sure how long it will still be supported
+  with regard to the coming ude desktop library, do a ./configure followed by a
+  make in the directory this release is unpacked to and then copy all the files
+  that need to be updated to their corresponding place in your $UDEdir.
+  You should update the following files:
+    * $UDEdir/uwm (uwm executable)
+    * $UDEdir/gfx (directory where the hex buttons are located in)
+    * $UDEdir/config or $UDEdir/oldconfig for examples about uwm/ude
+      configuration.

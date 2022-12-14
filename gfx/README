@@ -1,0 +1,30 @@
+How to generate an uwm hex icon set in three steps
+
+1. Use your favourite painting program to draw the icons. Pay attention that
+   the transparent areas are really transparent and save all icons in the same
+   directory under the following names:
+     - autorise.xpm   inactive autorise icon
+     - autorises.xpm  active autorise icon
+     - back.xpm       inactive "send window to background" icon
+     - backs.xpm      active "send window to background" icon
+     - close.xpm      inactive "close window" icon
+     - closes.xpm     active "close window" icon
+     - iconify.xpm    inactive "iconify window" icon
+     - iconifys.xpm   active "iconify window" icon
+     - kill.xpm       inactive "xkill client" icon
+     - kills.xpm      active "xkill client" icon
+     - menu.xpm       inactive "window menu" icon
+     - menus.xpm      active "window menu" icon
+     - really.xpm     inactive "really xkill client?" icon
+     - reallys.xpm    active "really xkill client?" icon
+   The icons can have arbitrary shapes and sizes but it is recommended that the
+   active version of an icon completely overlaps the inactive version as to
+   avoid flickering effects. Only XPM file format is supported.
+2. Set the coordinates of each icon's upper left corner relative to the hex
+   menu's center using the coordadd script from the extras/tools directory of
+   the uwm source distribution. This script can also be downloaded from
+   https://svn.sourceforge.net/svnroot/udeproject/uwm/branches/BRANCH-0.2/extras/tools/coordadd
+   The hex menu's center is the initial position of the mouse pointer inside
+   the hex menu.
+3. Set the HexPath variable in your config file to the directory where you
+   saved the hex icons and restart uwm.

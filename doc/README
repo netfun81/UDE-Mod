@@ -1,0 +1,33 @@
+README for uwm 0.2.10
+=====================
+
+This is uwm, the ultimate window manager, which will be one day part of
+ude, the unix desktop environment.
+
+See the files INSTALL and INSTALL.UDE for compilation and installation
+instructions.
+
+For documentation on how to use and configure uwm, please check out the
+file manual.dvi in the doc directory or the html documentation tree.
+
+Please note that our url at ude.org is no longer available, the project
+has migrated to sourceforge and can be reached at
+
+                     http://udeproject.sourceforge.net.
+
+Mirror pages also might be down or outaged due to some problems with the
+migration.
+
+Oh, and don't forget: We're still looking for developers, designers etc.
+The more people work on this project the higher the chances are that one
+day we'll reach a major version number of 1 (i.e. "all" features
+implemented).
+Contact me if you're interested.
+
+ude - get used to it.
+
+
+For bug reports, suggestions etc. please contact
+
+                        Christian Ruppert <arc@users.sourceforge.net>
+

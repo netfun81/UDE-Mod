@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Christian Ruppert
+# This file is distributed under the same license as the uwm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: uwm 0.2.11b\n"
+"Report-Msgid-Bugs-To: arc@users.sf.net\n"
+"POT-Creation-Date: 2022-06-05 12:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: uwm/windows.c:572
+msgid "Windows Menu"
+msgstr ""
+
+#: uwm/windows.c:584 uwm/windows.c:585
+msgid "Sticky Windows"
+msgstr ""
+
+#: uwm/windows.c:602
+msgid ">nameless window<"
+msgstr ""
+
+#: uwm/winmenumenu.c:79
+msgid "Sticky window"
+msgstr ""
+
+#: uwm/winmenumenu.c:90
+msgid "Move to WorkSpace"
+msgstr ""
+
+#: uwm/init.c:533
+msgid "Application Menu"
+msgstr ""
+
+#: uwm/init.c:890 uwm/init.c:917 uwm/init.c:937 uwm/init.c:976 uwm/init.c:996
+#: uwm/init.c:1022 uwm/init.c:1067 uwm/init.c:1081 uwm/init.c:1089
+#: uwm/init.c:1102 uwm/init.c:1110 uwm/init.c:1184 uwm/init.c:1195
+#: uwm/init.c:1249 uwm/init.c:1260 uwm/init.c:1271 uwm/init.c:1282
+#: uwm/init.c:1293
+#, c-format
+msgid "UWM: error in config-file. Ignored.\n"
+msgstr ""
+
+#: uwm/uwmmenu.c:148
+msgid "Really?!"
+msgstr ""
+
+#: uwm/uwmmenu.c:151
+msgid "UWM Menu"
+msgstr ""
+
+#: uwm/uwmmenu.c:156
+msgid "No!"
+msgstr ""
+
+#: uwm/uwmmenu.c:157
+msgid "Yes!"
+msgstr ""
+
+#: uwm/uwmmenu.c:159
+msgid "Quit UDE"
+msgstr ""
+
+#: uwm/uwmmenu.c:162 uwm/uwmmenu.c:169
+msgid "Restart UDE"
+msgstr ""
+
+#: uwm/uwmmenu.c:165
+msgid "Reexecute StartScript"
+msgstr ""
+
+#: uwm/uwmmenu.c:166
+msgid "No execute StartScript"
+msgstr ""
+
+#: uwm/uwmmenu.c:174 uwm/uwmmenu.c:181
+msgid "Launch another WM"
+msgstr ""
+
+#: uwm/uwmmenu.c:184
+msgid "Reload application menu"
+msgstr ""

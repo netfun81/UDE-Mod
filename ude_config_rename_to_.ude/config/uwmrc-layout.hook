@@ -1,0 +1,140 @@
+% ude general layout settinigs
+% See also uwmrc
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Window layout.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% BorderWidth = <nr>
+%       Default: 10
+%
+%       Sets the width of window borders to <nr> pixels.
+BorderWidth=10
+
+% NarrowBorderWidth = <nr>
+%       Default: 3
+%
+%       Defines the width of so-called transient window´s
+%       borders. Most applications mark requesters and other dialogue
+%       windows etc. as transient.
+NarrowBorderWidth=3
+
+% FrameBevelWidth = <nr>
+%       Default: 2
+%
+%       Specifies the bevel width used for window frames.
+%       Use 0 if you do not want bevels to be drawn on your window
+%       borders (old and ugly look of uwm).
+FrameBevelWidth=3
+
+% BevelWidth = <nr>
+%       Default: 2
+%
+%       Sets the width of bevels for ude applications (will be used in
+%       the library)
+BevelWidth=2
+
+% TitleHeight = <nr>
+%       Default: 0
+%
+%       Sets the number of pixels the northern border is wider than
+%       the other ones.
+TitleHeight=0
+
+% FrameFlags = <nr>
+%       Default: 31
+%
+%       Specifies the layout and behaviour of window titles and
+%       borders. Expects a sum of the following values:
+%
+%        1      Groove & draw the groove on window borders if there´s
+%               enough space. 
+%        2      Line & draw a black separation line along the inside
+%               of window borders.
+%        4      Inactive Title & display inactive windows´ titles.
+%        8      Active Title & display active window´s title.
+%       16      Dodgy Title & hide active window´s title when hit by
+%               the mouse pointer.
+%       32      Center Title & display titles in the center of the top
+%               border instead of the northeastern corner.
+%
+%       E.g. use a value of 1+2+4+32=39 if you want titles in the
+%       center position disappearing when the window is activated and
+%       grooves drawn on your window borders. 
+FrameFlags=31
+
+% ResourceFile = <filename>
+%       Default: ""
+%
+%       uwm can read a file which has the same format as xrdb files
+%       (see xrdb documentation for details) except that there are
+%       some additional macros defined which are replaced by uwm
+%       workspace dependent.
+ResourceFile=urdb
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Menu layout and items.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% MenuSize = <triple>
+%       Default: 2;4;2
+%
+%       Sets ude´s menu layout:
+%       #1 defines the width of menu bevels,
+%       #2 defines the label´s x-offset,
+%       #3 defines the label´s y-offset.
+MenuSize=2;4;2
+
+% MenuFile = <filename>
+%       Default: "appmenu"
+%
+%       Makes uwm reading its application menu from <filename>. Please
+%       note that uwm reads exactly one menu file after finishing
+%       reading ´uwmrc´. This means that a "MenuFile" line overwrites
+%       any previous "MenuFile" lines. If you want to merge several
+%       menu files into one application menu, please use the features
+%       menu files offer to do this. 
+MenuFile=appmenu
+
+% OtherWMs = <string>
+%       Default: ""
+%
+%       Expects a comma seperated list of shell command lines used to
+%       start other window managers out of uwm.
+OtherWMs=xterm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Fonts.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% MenuFont = <font>
+%       Default: (according to availability)
+%
+%       Sets the font used in menus.
+MenuFont=-*-lucida-medium-r-*-*-*-120-*-*-*-*-*-*
+
+% TextFont = <font>
+%       Default: (according to availability)
+%
+%       Sets the font used for text windows such as editors or
+%       terminals etc.
+TextFont=7x13
+
+% HighlightFont = <font>
+%       Default: (according to availability)
+%
+%       Sets the font for highlighted text.
+HighlightFont=7x13bold
+
+% InactiveFont = <font>
+%       Default: (according to availability)
+%
+%       Sets the font for inactive elements such as buttons or menu
+%       items etc.
+InactiveFont=-*-lucida-medium-i-*-*-*-120-*-*-*-*-*-*
+
+% TitleFont = <font>
+%       Default: (according to availability)
+%
+%       Specifies the font used for window titles.
+TitleFont=-*-lucida-medium-r-*-*-*-120-*-*-*-*-*-*

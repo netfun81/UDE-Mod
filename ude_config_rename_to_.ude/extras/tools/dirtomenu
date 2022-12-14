@@ -1,0 +1,16 @@
+#!/bin/sh
+# by Adam Sampson
+# Script for being included into ude menu-files, will enable putting complete
+# directories into a (sub)-menu, e.g. for displaying images:
+# PIPE "$UDEdir/extras/tools/dirtomenu /usr/share/pictures/ '' display"
+# will create a menu-file section with a display >img< for each image >img< in
+# the specified path.
+# Another example: dirtomenu /usr/doc/Books/ .dvi xdvi
+#
+# first argument: directory
+# second argument: suffix or '' for any suffixes
+# third argument: command to open
+
+for x in $1/*$2 ; do
+	echo "ITEM \"`basename $x $2`\":\"$3 $x\";"
+done

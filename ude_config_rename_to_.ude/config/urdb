@@ -1,0 +1,555 @@
+! -*-Mode: xrdb;-*-
+!
+! /etc/X11/ude/urdb
+!
+! rdb file for uwm
+!
+! Please read /usr/doc/ude/uwm_manual.ascii.gz and/or
+! /usr/doc/ude/manual.dvi for more information.
+!
+! urdb-files have the same format as xrdb files (see xrdb
+! documentation for details) except that there are some additional
+! macros defined which are replaced by uwm workspace dependent. These
+! macros are:
+!
+!	@BACKGROUND@
+!		represents the workspace´s background color set with
+!		"BackColor" in uwmrc.
+!	@LIGHTCOLOR@
+!		represents the workspace´s light bevel color for
+!		"BackColor".
+!	@SHADOWCOLOR@
+!		represents the workspace´s shadow bevel color for
+!		"BackColor".
+!	@STANDARDTEXT@
+!		represents the workspace´s standard text color
+!		("TextColor").
+!	@INACTIVETEXT@
+!		represents the workspace´s color for inactive text
+!		("InactiveText").
+!	@HIGHLIGHTEDTEXT@
+!		represents the workspace´s color for highlighted text
+!		("HighlightedText").
+!	@HIGHLIGHTEDBGR@
+!		represents the workspace´s background color for
+!		highlighted text ("HighlightedBgr").
+!	@TEXTCOLOR@
+!		represents the workspace´s text color for text windows
+!		("TextColor").
+!	@TEXTBGR@
+!		represents the workspace´s background color for text
+!		windows ("TextBgr").
+!	@BEVELWIDTH@
+!		the standard bevel width ("BevelWidth").
+!	@FLAGS@
+!		1 if transient menus are activated, if not 0.
+!	@STANDARDFONT@
+!		the standard font ("MenuFont").
+!	@INACTIVEFONT@
+!		the font for inactive buttons etc ("InactiveFont").
+!	@HIGHLIGHTFONT@
+!		the font used for highlighted text ("HighlightFont").
+!	@TEXTFONT@
+!		the font used for text windows ("TextFont").
+!	@STANDARDFONTSET@
+!		the standard font set ("MenuFont").
+!	@INACTIVEFONTSET@
+!		the font set for inactive buttons etc ("InactiveFont").
+!	@HIGHLIGHTFONTSET@
+!		the font set used for highlighted text ("HighlightFont").
+!	@TEXTFONTSET@
+!		the font set used for text windows ("TextFont").
+!
+! for comments use hash (´#´), ´!´ or ´%´ as first (!) character of
+! the line.
+
+! general resources
+*background: @BACKGROUND@
+*foreground: @STANDARDTEXT@
+*lowlight: @SHADOWCOLOR@
+*highlight: @LIGHTCOLOR@
+*Font: @STANDARDFONT@
+*FontSet: @STANDARDFONTSET@
+*FontList: @STANDARDFONTSET@
+*font: @STANDARDFONT@
+*fontSet: @STANDARDFONTSET@
+
+! some selected Xt-resources
+*AsciiSink.background: @TEXTBGR@
+*AsciiSink.foreground: @TEXTCOLOR@
+*AsciiSink.cursorColor: @TEXTCOLOR@
+
+! MOTIF
+
+*XmScrollBar.background: @BACKGROUND@
+*XmScrollBar.foreground: @STANDARDTEXT@
+
+*XmSash.background: @BACKGROUND@
+*XmSash.foreground: @STANDARDTEXT@
+
+*XmLabel.background: @BACKGROUND@
+*XmLabel.foreground: @STANDARDTEXT@
+*XmLabelGadget.background: @BACKGROUND@
+*XmLabelGadget.foreground: @STANDARDTEXT@
+
+*XmCascadeButton.background: @BACKGROUND@
+*XmCascadeButton.foreground: @STANDARDTEXT@
+*XmCascadeButtonGadget.background: @BACKGROUND@
+*XmCascadeButtonGadget.foreground: @STANDARDTEXT@
+
+*XmToggleButton.background: @BACKGROUND@
+*XmToggleButton.foreground: @STANDARDTEXT@
+*XmToggleButtonGadget.background: @BACKGROUND@
+*XmToggleButtonGadget.foreground: @STANDARDTEXT@
+
+*XmPushButton.background: @BACKGROUND@
+*XmPushButton.foreground: @STANDARDTEXT@
+*XmPushButtonGadget.background: @BACKGROUND@
+*XmPushButtonGadget.foreground: @STANDARDTEXT@
+
+*XmSeparator.background: @BACKGROUND@
+*XmSeparator.foreground: @STANDARDTEXT@
+*XmSeparatorGadget.background: @BACKGROUND@
+*XmSeparatorGadget.foreground: @STANDARDTEXT@
+
+*XmTearOffButton.background: @BACKGROUND@
+*XmTearOffButton.foreground: @STANDARDTEXT@
+*XmTearOffButtonGadget.background: @BACKGROUND@
+*XmTearOffButtonGadget.foreground: @STANDARDTEXT@
+
+*XmMenuShell.background: @BACKGROUND@
+*XmMenuShell.foreground: @STANDARDTEXT@
+
+*XmDialogShell.background: @BACKGROUND@
+*XmDialogShell.foreground: @STANDARDTEXT@
+
+*XmFileSelectionBox.background: @BACKGROUND@
+*XmFileSelectionBox.foreground: @STANDARDTEXT@
+
+*XmSelectionBox.background: @BACKGROUND@
+*XmSelectionBox.foreground: @STANDARDTEXT@
+
+*XmMessageBox.background: @BACKGROUND@
+*XmMessageBox.foreground: @STANDARDTEXT@
+
+*XmRowColumn.background: @BACKGROUND@
+*XmRowColumn.foreground: @STANDARDTEXT@
+
+*XmFrame.background: @BACKGROUND@
+*XmFrame.foreground: @STANDARDTEXT@
+
+*XmForm.background: @BACKGROUND@
+*XmForm.foreground: @STANDARDTEXT@
+
+*XmScrolledWindow.background: @BACKGROUND@
+*XmScrolledWindow.foreground: @STANDARDTEXT@
+
+*XmPanedWindow.background: @BACKGROUND@
+*XmPanedWindow.foreground: @STANDARDTEXT@
+
+*XmText.background: @TEXTBGR@
+*XmText.foreground: @TEXTCOLOR@
+
+*XmTextField.background: @TEXTBGR@
+*XmTextField.foreground: @TEXTCOLOR@
+
+*XmList.background: @TEXTBGR@
+*XmList.foreground: @TEXTCOLOR@
+
+! Scribus
+scribus*Entry.background: #CCCCCCCCCCCC
+scribus*Entry.foreground: #000000000000
+scribus*Entry.highlightBackground: #000000000000
+scribus*Entry.highlightColor: #FFFFFFFFFFFF
+scribus*Entry.activeBackground: #000000000000
+scribus*Entry.activeForeground: #FFFFFFFFFFFF
+scribus*Entry.selectBackground: #000000000000
+scribus*Entry.selectForeground: #FFFFFFFFFFFF
+
+scribus*Text.background: #CCCCCCCCCCCC
+scribus*Text.foreground: #000000000000
+scribus*Text.highlightBackground: #000000000000
+scribus*Text.highlightColor: #FFFFFFFFFFFF
+scribus*Text.activeBackground: #000000000000
+scribus*Text.activeForeground: #FFFFFFFFFFFF
+scribus*Text.selectBackground: #000000000000
+scribus*Text.selectForeground: #FFFFFFFFFFFF
+
+scribus*Listbox.background: #CCCCCCCCCCCC
+scribus*Listbox.foreground: #000000000000
+scribus*Listbox.highlightBackground: #000000000000
+scribus*Listbox.highlightColor: #FFFFFFFFFFFF
+scribus*Listbox.activeBackground: #000000000000
+scribus*Listbox.activeForeground: #FFFFFFFFFFFF
+scribus*Listbox.selectBackground: #000000000000
+scribus*Listbox.selectForeground: #FFFFFFFFFFFF
+
+scribus*Canvas.background: #CCCCCCCCCCCC
+scribus*Canvas.foreground: #000000000000
+scribus*Canvas.highlightBackground: #000000000000
+scribus*Canvas.highlightColor: #FFFFFFFFFFFF
+scribus*Canvas.activeBackground: #000000000000
+scribus*Canvas.activeForeground: #FFFFFFFFFFFF
+scribus*Canvas.selectBackground: #000000000000
+scribus*Canvas.selectForeground: #FFFFFFFFFFFF
+
+! Tcl/Tk
+
+*Toplevel.background: @BACKGROUND@
+*Toplevel.foreground: @STANDARDTEXT@
+*Toplevel.highlightBackground: @BACKGROUND@
+*Toplevel.highlightColor: @STANDARDTEXT@
+*Toplevel.activeBackground: @BACKGROUND@
+*Toplevel.activeForeground: @STANDARDTEXT@
+
+*Button.background: @BACKGROUND@
+*Button.foreground: @STANDARDTEXT@
+*Button.highlightBackground: @BACKGROUND@
+*Button.highlightColor:	@STANDARDTEXT@
+*Button.activeBackground: @BACKGROUND@
+*Button.activeForeground: @STANDARDTEXT@
+
+*Menubutton.background: @BACKGROUND@
+*Menubutton.foreground: @STANDARDTEXT@
+*Menubutton.highlightBackground: @BACKGROUND@
+*Menubutton.highlightColor: @STANDARDTEXT@
+*Menubutton.activeBackground: @BACKGROUND@
+*Menubutton.activeForeground: @STANDARDTEXT@
+
+*Checkbutton.background: @BACKGROUND@
+*Checkbutton.foreground: @STANDARDTEXT@
+*Checkbutton.highlightBackground: @BACKGROUND@
+*Checkbutton.highlightColor: @STANDARDTEXT@
+*Checkbutton.activeBackground: @BACKGROUND@
+*Checkbutton.activeForeground: @STANDARDTEXT@
+
+*Radiobutton.background: @BACKGROUND@
+*Radiobutton.foreground: @STANDARDTEXT@
+*Radiobutton.highlightBackground: @BACKGROUND@
+*Radiobutton.highlightColor: @STANDARDTEXT@
+*Radiobutton.activeBackground: @BACKGROUND@
+*Radiobutton.activeForeground: @STANDARDTEXT@
+
+!*Label.background:	@BACKGROUND@
+!*Label.foreground: @STANDARDTEXT@
+*Label.highlightBackground: @BACKGROUND@
+*Label.highlightColor: @STANDARDTEXT@
+*Label.activeBackground: @BACKGROUND@
+*Label.activeForeground: @STANDARDTEXT@
+
+*Menu.background: @BACKGROUND@
+*Menu.foreground: @STANDARDTEXT@
+*Menu.highlightBackground: @BACKGROUND@
+*Menu.highlightColor: @STANDARDTEXT@
+*Menu.activeBackground: @BACKGROUND@
+*Menu.activeForeground: @STANDARDTEXT@
+
+*Frame.background: @BACKGROUND@
+*Frame.foreground: @STANDARDTEXT@
+*Frame.highlightBackground:	@BACKGROUND@
+*Frame.highlightColor: @STANDARDTEXT@
+*Frame.activeBackground: @BACKGROUND@
+*Frame.activeForeground: @STANDARDTEXT@
+
+!*Scrollbar.background: @BACKGROUND@
+!*Scrollbar.foreground: @STANDARDTEXT@
+*Scrollbar.highlightBackground: @BACKGROUND@
+*Scrollbar.highlightColor: @STANDARDTEXT@
+*Scrollbar.activeBackground: @BACKGROUND@
+*Scrollbar.activeForeground: @STANDARDTEXT@
+*Scrollbar.troughColor: @BACKGROUND@
+
+*Scale.background: @BACKGROUND@
+*Scale.foreground: @STANDARDTEXT@
+*Scale.highlightBackground: @BACKGROUND@
+*Scale.highlightColor: @STANDARDTEXT@
+*Scale.activeBackground: @BACKGROUND@
+*Scale.activeForeground: @STANDARDTEXT@
+*Scale.troughColor: @BACKGROUND@
+
+*Entry.background: @TEXTBGR@
+*Entry.foreground: @TEXTCOLOR@
+*Entry.highlightBackground: @TEXTBGR@
+*Entry.highlightColor: @TEXTCOLOR@
+*Entry.activeBackground: @TEXTBGR@
+*Entry.activeForeground: @TEXTCOLOR@
+*Entry.selectBackground: @HIGHLIGHTEDBGR@
+*Entry.selectForeground: @HIGHLIGHTEDTEXT@
+
+!*Text.background: @TEXTBGR@
+!*Text.foreground: @TEXTCOLOR@
+*Text.highlightBackground: @TEXTBGR@
+*Text.highlightColor: @TEXTCOLOR@
+*Text.activeBackground: @TEXTBGR@
+*Text.activeForeground: @TEXTCOLOR@
+*Text.selectBackground: @HIGHLIGHTEDBGR@
+*Text.selectForeground: @HIGHLIGHTEDTEXT@
+
+*Listbox.background: @TEXTBGR@
+*Listbox.foreground: @TEXTCOLOR@
+*Listbox.highlightBackground: @TEXTBGR@
+*Listbox.highlightColor: @TEXTCOLOR@
+*Listbox.activeBackground: @TEXTBGR@
+*Listbox.activeForeground: @TEXTCOLOR@
+*Listbox.selectBackground: @HIGHLIGHTEDBGR@
+*Listbox.selectForeground: @HIGHLIGHTEDTEXT@
+
+*Canvas.background: @TEXTBGR@
+*Canvas.foreground: @TEXTCOLOR@
+*Canvas.highlightBackground: @TEXTBGR@
+*Canvas.highlightColor: @TEXTCOLOR@
+*Canvas.activeBackground: @TEXTBGR@
+*Canvas.activeForeground: @TEXTCOLOR@
+*Canvas.selectbackground: @HIGHLIGHTEDBGR@
+*Canvas.selectforeground: @HIGHLIGHTEDTEXT@
+
+! Gvim
+
+Vim*menuBar*font: @STANDARDFONT@
+Vim*menuBar*fontSet: @STANDARDFONTSET@
+Vim*font: @TEXTFONT@
+Vim*fontSet: @TEXTFONTSET@
+Vim*reverseVideo: True
+Vim*background: @TEXTBGR@
+Vim*foreground: @TEXTCOLOR@
+Vim*scrollBackground: @BACKGROUND@
+Vim*scrollForeground: @HIGHLIGHTEDBGR@
+Vim*menuBackground: @BACKGROUND@
+Vim*menuForeground: @STANDARDTEXT@
+Vim*tooltipBackground: @BACKGROUND@
+Vim*tooltipForeground: @STANDARDTEXT@
+Vim*menuFont: @STANDARDFONT@
+Vim*menuFontSet: @STANDARDFONTSET@
+Vim*tooltipFont: @STANDARDFONT@
+Vim*borderWidth: @BEVELWIDTH@
+
+! Emacs
+
+Emacs.default.attributeForeground:	@TEXTCOLOR@
+Emacs.default.attributeBackground:	@TEXTBGR@
+ 
+Emacs*Foreground:		@TEXTCOLOR@
+Emacs*Background:		@TEXTBGR@
+Emacs*menubar*foreground:	@STANDARDTEXT@
+Emacs*menubar*background:	@BACKGROUND@
+Emacs*popup*Foreground:		@STANDARDTEXT@
+Emacs*popup*Background:		@BACKGROUND@
+Emacs*Dialog*foreground:	@STANDARDTEXT@
+Emacs*Dialog*background:	@BACKGROUND@
+Emacs*XlwScrollBar.Foreground:	@STANDARDTEXT@
+Emacs*XlwScrollBar.Background:	@BACKGROUND@
+Emacs*topToolBarShadowColor:	@BACKGROUND@
+Emacs*bottomToolBarShadowColor:	@BACKGROUND@
+Emacs*backgroundToolBarColor:	@BACKGROUND@
+Emacs*toolBarShadowThickness:	0
+ 
+Emacs*font:			@TEXTFONT@
+Emacs*fontSet:			@TEXTFONTSET@
+Emacs*menubar*Font:		@STANDARDFONT@
+Emacs*popup*Font:		@STANDARDFONT@
+Emacs*Dialog*Font:		@STANDARDFONT@
+Emacs.default.attributeFont:	@TEXTFONT@
+
+! Netscape
+
+Netscape*background: @BACKGROUND@
+Netscape*foreground: @STANDARDTEXT@
+Netscape*XmText*foreground: @TEXTCOLOR@
+Netscape*XmText*background: @TEXTBGR@
+Netscape*XmTextField*foreground: @TEXTCOLOR@
+Netscape*XmTextField*background: @TEXTBGR@
+Netscape*XmList*foreground: @TEXTCOLOR@
+Netscape*XmList*background: @TEXTBGR@
+Netscape*topShadowColor: @LIGHTCOLOR@
+Netscape*bottomShadowColor: @SHADOWCOLOR@
+Netscape*urlText*foreground: @TEXTCOLOR@
+Netscape*urlText*background: @TEXTBGR@
+Netscape*XmLGrid.foreground: @TEXTCOLOR@
+Netscape*XmLGrid.background: @BACKGROUND@
+!Netscape*XmLGrid*fontList: FONTLIST
+Netscape*urlLabel*foreground: @TEXTCOLOR@
+Netscape*urlLabel*background: @TEXTBGR@
+Netscape*thermo.slider.foreground: @HIGHLIGHTEDBGR@
+Netscape*thermo.slider.background: @BACKGROUND@
+Netscape*power.LED.foreground: @HIGHLIGHTEDBGR@
+Netscape*power.LED.background: @BACKGROUND@
+Netscape*defaultBackground:	@TEXTBGR@
+Netscape*selectColor: @BACKGROUND@
+Netscape*highlightColor: @BACKGROUND@
+Netscape*highlightThickness: 1
+Netscape*selectForeground: @HIGHLIGHTEDTEXT@
+Netscape*selectBackground: @HIGHLIGHTEDBGR@
+!Netscape*banner*folderDropdown*fontList: FONTLIST
+
+! XView resources
+
+Font.Name: @STANDARDFONT@
+Window.Color.Foreground: @TEXTCOLOR@
+Window.Color.Background: @TEXTBGR@
+OpenWindows.windowColor: @BACKGROUND@
+OpenWindows.workspaceColor: @BACKGROUND@
+
+! Xaw3d (Athena) resources
+
+*beNiceToColormap: false
+*borderColor: black
+
+*MenuButton.background: @BACKGROUND@
+*Command.background: @BACKGROUND@
+*Toggle.background: @BACKGROUND@
+*Label.background: @BACKGROUND@
+*Scrollbar*background: @BACKGROUND@
+*SimpleMenu*background: @BACKGROUND@
+*Box.background: @BACKGROUND@
+*Form.background: @BACKGROUND@
+*Dialog.background: @BACKGROUND@
+*Text.background: @TEXTBGR@
+*List.background: @TEXTBGR@
+
+*MenuButton.foreground: @STANDARDTEXT@
+*Command.foreground: @STANDARDTEXT@
+*Toggle.foreground: @STANDARDTEXT@
+*Label.foreground: @STANDARDTEXT@
+*Scrollbar.foreground: @STANDARDTEXT@
+*SimpleMenu*foreground: @STANDARDTEXT@
+*Box.foreground: @STANDARDTEXT@
+*Form.foreground: @STANDARDTEXT@
+*Dialog.foreground: @STANDARDTEXT@
+*Text.foreground: @TEXTCOLOR@
+*List.foreground: @TEXTCOLOR@
+
+*ScrollbarBackground: @BACKGROUND@
+*Scrollbar*width: 15
+*Scrollbar*height: 15
+*Scrollbar*shadowWidth: 2
+!*Scrollbar*cursorName: left_ptr
+*Scrollbar*pushThumb: false
+*ShapeStyle: Rectangle
+*SmeBSB*shadowWidth: 3
+!*Scrollbar*Cursor: left_ptr
+
+! for nedit (make syntax highlighting still visible...)
+
+!Nedit*fontList: FONTLIST
+!Nedit*background: @BACKGROUND@
+!Nedit*foreground: @STANDARDTEXT@
+Nedit*selectColor: @BACKGROUND@
+Nedit*highlightColor: @BACKGROUND@
+Nedit*text.background: @TEXTBGR@
+Nedit*text.foreground: @TEXTCOLOR@
+Nedit*text.selectBackground: @HIGHLIGHTEDBGR@
+Nedit*text.selectForeground: @HIGHLIGHTEDTEXT@
+Nedit*text.cursorForeground: @TEXTCOLOR@
+Nedit*remapDeleteKey: True
+Nedit*text.heavyCursor: True
+Nedit*BlinkRate: 0
+Nedit*shell: /bin/sh
+
+! for xdvi (i like my dvis displayed black on white...)
+xdvi*background: white
+xdvi*foreground: black
+xdvi*cursorColor: black
+
+! ML
+
+ml*background: @BACKGROUND@
+ml*foreground: @STANDARDTEXT@
+ml*XmText*foreground: @TEXTCOLOR@
+ml*XmText*background: @TEXTBGR@
+ml*XmList*foreground: @TEXTCOLOR@
+ml*XmList*background: @TEXTBGR@
+!ml*XmLabel*foreground: @STANDARDTEXT@
+!ml*XmLabel*background: @BACKGROUND@
+ml*XmTextField*background: @TEXTBGR@
+ml*XmTextField*foreground: @TEXTCOLOR@
+ml*helpwin*textSW.text.background: @TEXTBGR@
+ml*helpwin*textSW.text.foreground: @TEXTCOLOR@
+ml*textSW.text.background: @TEXTBGR@
+!ml*fontList: FONTLIST
+ml*textSW.text.foreground: @TEXTCOLOR@
+ml*log*textSW.text.background: @TEXTBGR@
+ml*log*textSW.text.foreground: @TEXTCOLOR@
+ml*selectColor: @BACKGROUND@
+ml*highlightColor: @BACKGROUND@
+ml*textSW*fontList: @TEXTFONTSET@
+!ml*helpwin*textSW*fontList: FONTLIST
+!ml*log*textSW*fontList: FONTLIST
+ml.form.listSW*fontList: @TEXTFONTSET@
+ml*read*listSW*fontList: @TEXTFONTSET@
+ml*read*headerSW*fontList: @TEXTFONTSET@
+ml.form.height: 550
+ml.form.width: 650
+ml*focusPolicy:			pointer
+ml*XmForm*verticalSpacing:	0
+ml*XmForm*topOffset:		0
+ml*XmForm*bottomOffset:		0
+ml*XmRowColumn*spacing:		0
+ml*XmRowColumn*marginHeight:	1
+ml*XmRowColumn.entryBorder:	0
+ml*XmCascadeButton.marginHeight:	2
+ml*XmCascadeButton.marginWidth:	8
+ml*XmToggleButton.marginHeight:	1
+ml*XmPushButton.marginHeight:	1
+ml*marginHeight:			2
+ml*marginWidth:			3
+ml*XmList*highlightThickness:	0
+ml*borderWidth:			0
+
+! Editres
+
+Editres*Font: @STANDARDFONT@
+Editres*Tree.Background: @TEXTBGR@
+Editres*Tree.Foreground: @TEXTCOLOR@
+Editres*Tree.Toggle.Foreground: @STANDARDTEXT@
+Editres*Tree.Toggle.Background: @BACKGROUND@
+Editres*Panner.Background: @BACKGROUND@
+
+! Ddd
+
+ddd*foreground:                   @STANDARDTEXT@
+ddd*background:                   @BACKGROUND@
+ddd*XmText.background:            @TEXTBGR@
+ddd*XmTextField.background:       @TEXTBGR@
+ddd*GraphEdit.background:         @TEXTBGR@
+ddd*XmList.background:            @TEXTBGR@
+ddd*XmText.foreground:            @TEXTCOLOR@
+ddd*XmTextField.foreground:       @TEXTCOLOR@
+ddd*GraphEdit.foreground:         @TEXTCOLOR@
+ddd*XmList.foreground:            @TEXTCOLOR@
+ddd*topShadowColor:               @LIGHTCOLOR@
+ddd*bottomShadowColor:            @SHADOWCOLOR@
+ddd*defaultFont:                  @TEXTFONT@
+ddd*variableWidthFont:            @STANDARDFONT@
+ddd*variableWidthFontSET:         @STANDARDFONTSET@
+ddd*graph_edit.background:        @BACKGROUND@
+ddd*graph_edit.foreground:        @STANDARDTEXT@
+ddd*graph_edit.gridColor:         @SHADOWCOLOR@
+ddd*graph_edit.topShadowColor:    @LIGHTCOLOR@
+ddd*graph_edit.bottomShadowColor: @SHADOWCOLOR@
+
+! XTerm
+
+XTerm*background: @TEXTBGR@
+XTerm*foreground: @TEXTCOLOR@
+XTerm*Font: @TEXTFONT@
+XTerm.SimpleMenu*background: @BACKGROUND@
+XTerm.SimpleMenu*foreground: @STANDARDTEXT@
+XTerm.SimpleMenu*font: @STANDARDFONT@
+
+! rxvt
+rxvt.scrollColor: @BACKGROUND@
+rxvt.troughColor: @BACKGROUND@
+rxvt.font: @TEXTFONT@
+rxvt.background: @TEXTBGR@
+rxvt.foreground: @TEXTCOLOR@
+
+! xfig
+xfig*canvasbackground: white
+xfig*canvasforeground: black
+
+! gnuplot
+gnuplot*background:  @TEXTBGR@
+gnuplot*textColor:   @TEXTCOLOR@
+gnuplot*borderColor: @TEXTCOLOR@
+gnuplot*axisColor:   @TEXTCOLOR@
+

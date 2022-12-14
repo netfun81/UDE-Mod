@@ -1,0 +1,35 @@
+#!/bin/bash
+# by Jaime "el mono" Silva <mono@andromeda.utp.edu.co>
+#
+# this script is based in the script "dirtomenu" maded by Adam Sampson
+# this one searches recursivelly the directory and avoids directories
+# that do not contain the wanted kind of files. This one can also handle
+# spaces in the file names.
+# ********* IMPORTANT *********
+# Note that in this script the command is the second parameter and the
+# file extension is the third
+# *****************************
+# first argument: directory
+# second argument: command to open
+# third argument: suffix or '' for any suffixes
+
+for x in $1/* ; do
+    if [ -d $x ]; then
+	no_cont=""
+	for i in $x/*$3; do
+	    if [ ! -e $i ]; then
+		no_cont="yes"
+	    fi
+	done
+	if [ -z "$no_cont" ]; then
+	    echo "SUBMENU \"$(basename "$x")\" {"
+	    $0 $x $2 $3
+	    echo "}"
+	fi
+    fi
+done
+
+echo "LINE;"
+for x in $1/*$3 ; do
+    echo "ITEM \"$(basename "$x" $3)\":\"$2 \\\"$x\\\"\";"
+done

@@ -10,5 +10,5 @@ Mod4Mask(WIN) + Tab - lower selected window
 
 Mod4Mask(WIN) + i - iconify window
 
---included my configuration files in folder .ude, copy this folder to your $HOME directory.
+--included my configuration files in folder ude_config, copy this folder to your $HOME directory and rename to .ude
 

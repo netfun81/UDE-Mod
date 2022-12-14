@@ -449,10 +449,10 @@ void HandleKeyRelease(XEvent *event)
     Node *n,*n2;
     int dummy;
     switch(*XGetKeyboardMapping(disp,event->xkey.keycode,1,&dummy)){
-      case XK_Right: ChangeWS((TheScreen.desktop.ActiveWorkSpace +1)\
+      case XK_x: ChangeWS((TheScreen.desktop.ActiveWorkSpace +1)\
                                      % TheScreen.desktop.WorkSpaces);
                      break;
-      case XK_Left:  ChangeWS((TheScreen.desktop.ActiveWorkSpace
+      case XK_z:  ChangeWS((TheScreen.desktop.ActiveWorkSpace
                               + TheScreen.desktop.WorkSpaces
                               - 1) % TheScreen.desktop.WorkSpaces);
                      break;
@@ -476,9 +476,9 @@ void HandleKeyRelease(XEvent *event)
                      break;
       case XK_Page_Up: if(ActiveWin) RaiseWin(ActiveWin);
                      break;
-      case XK_Page_Down: if(ActiveWin) LowerWin(ActiveWin);
+      case XK_Tab: if(ActiveWin) LowerWin(ActiveWin);
                      break;
-      case XK_End:   if(ActiveWin) IconifyWin(ActiveWin);
+      case XK_i:   if(ActiveWin) IconifyWin(ActiveWin);
                      break;
     }
   }

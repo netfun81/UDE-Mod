@@ -53,7 +53,7 @@
 
 #define FRAME_EVENTS (EnterWindowMask|LeaveWindowMask|SubstructureRedirectMask|SubstructureNotifyMask|FocusChangeMask)
 
-#define UWM_MODIFIERS (ControlMask | Mod1Mask)
+#define UWM_MODIFIERS (Mod4Mask)
 
 /*** used structures ***/ 
 

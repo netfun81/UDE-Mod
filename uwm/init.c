@@ -1795,19 +1795,19 @@ UWM ");
     XGrabButton(disp, AnyButton, UWM_MODIFIERS | i, TheScreen.root,
                 True, ButtonPressMask | ButtonReleaseMask, GrabModeAsync,
                 GrabModeAsync, None, None);
-    XGrabKey(disp, XKeysymToKeycode(disp,XK_Right), UWM_MODIFIERS|i,
+    XGrabKey(disp, XKeysymToKeycode(disp,XK_x), UWM_MODIFIERS|i,
              TheScreen.root, True, GrabModeAsync, GrabModeAsync);
-    XGrabKey(disp, XKeysymToKeycode(disp,XK_Left), UWM_MODIFIERS|i,
+    XGrabKey(disp, XKeysymToKeycode(disp,XK_z), UWM_MODIFIERS|i,
              TheScreen.root, True, GrabModeAsync, GrabModeAsync);
     XGrabKey(disp, XKeysymToKeycode(disp,XK_Up), UWM_MODIFIERS|i,
              TheScreen.root, True, GrabModeAsync, GrabModeAsync);
     XGrabKey(disp, XKeysymToKeycode(disp,XK_Down), UWM_MODIFIERS|i,
            TheScreen.root, True, GrabModeAsync, GrabModeAsync);
-    XGrabKey(disp, XKeysymToKeycode(disp,XK_Page_Down), UWM_MODIFIERS|i,
+    XGrabKey(disp, XKeysymToKeycode(disp,XK_Tab), UWM_MODIFIERS|i,
              TheScreen.root, True, GrabModeAsync, GrabModeAsync);
     XGrabKey(disp, XKeysymToKeycode(disp,XK_Page_Up), UWM_MODIFIERS|i,
              TheScreen.root, True, GrabModeAsync, GrabModeAsync);
-    XGrabKey(disp, XKeysymToKeycode(disp,XK_End), UWM_MODIFIERS|i,
+    XGrabKey(disp, XKeysymToKeycode(disp,XK_i), UWM_MODIFIERS|i,
              TheScreen.root, True, GrabModeAsync, GrabModeAsync);
     if(i==0) break;
   }

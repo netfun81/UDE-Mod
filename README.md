@@ -1,5 +1,5 @@
 # UDE-Mod
-This is UDE-.2.11b with these changes to keyboard shortcuts:
+This is UDE window manager .2.11b with these changes to keyboard shortcuts:
 -------
 
 Mod4Mask(WIN) + z - switch to desktop left
